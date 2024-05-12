@@ -1,6 +1,6 @@
 from turtle import Turtle
 ALIGNMENT="center"
-FONT=("Arial",24,"normal")
+FONT=("Arial",15,"normal")
 
 class Scoreboard(Turtle):
     def __init__(self):
@@ -10,6 +10,7 @@ class Scoreboard(Turtle):
         self.color("white")
         self.penup()
         self.goto(0,270)
+        #which saves the high score in your data file
         with open("snake_game/data.txt") as data:
             self.high_score=int(data.read())
             
